@@ -2,14 +2,11 @@
   "name": "react",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Mazensalu671.github.io/Mazen-portfolio",
   "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@stripe/react-stripe-js": "4.0.2",

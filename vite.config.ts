@@ -45,7 +45,6 @@ export default defineConfig({
   base,
   build: {
     sourcemap: true,
-    outDir: 'out', // مجلد البناء الخاص بك
   },
   resolve: {
     alias: {
