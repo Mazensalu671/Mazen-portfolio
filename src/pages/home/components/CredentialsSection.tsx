@@ -66,7 +66,6 @@ export default function CredentialsSection() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="mb-20"
         >
-          {/* تم تعديل العنوان هنا كما طلبت */}
           <h2 className="text-[40px] md:text-[48px] font-semibold tracking-tight text-[#1D1D1F] mb-4">
             Professional Certifications
           </h2>
@@ -114,7 +113,7 @@ export default function CredentialsSection() {
           {credentialsData.map((provider: Provider) => (
             <motion.div key={provider.id} variants={itemVariants} className="space-y-6">
               
-              {/* Issuer Header - تم توسيع مساحة الشعار هنا لكي لا تنضغط الصور الأفقية */}
+              {/* Issuer Header */}
               <div className="flex items-center gap-4 pb-2">
                 <div className="flex items-center shrink-0">
                   {provider.icon}
@@ -141,7 +140,8 @@ export default function CredentialsSection() {
                       boxShadow: "0 10px 30px -10px rgba(0, 0, 0, 0.05)"
                     }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="group relative bg-white border border-[#E5E5EA] rounded-[16px] px-8 py-6 flex flex-col md:flex-row md:items-center justify-between gap-6 cursor-pointer overflow-hidden"
+                    // تم التعديل هنا: تصغير الحواف في الجوال lg:px-8 lg:py-6
+                    className="group relative bg-white border border-[#E5E5EA] rounded-[16px] px-5 py-5 lg:px-8 lg:py-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 lg:gap-6 cursor-pointer overflow-hidden"
                   >
                     {/* Left Blue Accent Line on Hover */}
                     <motion.div 
@@ -153,42 +153,45 @@ export default function CredentialsSection() {
 
                     {/* Left: Certificate Name & Subtitle */}
                     <div className="flex flex-col gap-1 min-w-0 pl-1 flex-1">
-                      <h4 className="text-[17px] font-semibold text-[#1D1D1F] tracking-tight">
+                      {/* تم التعديل هنا: تصغير الخط في الجوال lg:text-[17px] */}
+                      <h4 className="text-[15px] lg:text-[17px] font-semibold text-[#1D1D1F] tracking-tight">
                         {cert.title}
                       </h4>
-                      <p className="text-[14px] text-[#86868B] font-normal group-hover:text-[#0066CC] transition-colors duration-200">
+                      <p className="text-[13px] lg:text-[14px] text-[#86868B] font-normal group-hover:text-[#0066CC] transition-colors duration-200">
                         {cert.subtitle}
                       </p>
                     </div>
 
                     {/* Center & Right Meta Elements */}
-                    <div className="flex items-center justify-between md:justify-end gap-10 md:gap-14 shrink-0">
+                    {/* تم التعديل هنا: تقليل المسافات في الجوال lg:gap-14 */}
+                    <div className="flex items-center justify-between lg:justify-end gap-3 lg:gap-14 shrink-0 mt-2 lg:mt-0 w-full lg:w-auto">
                       
                       {/* Issued Date */}
-                      <div className="w-[90px] text-left">
-                        <span className="text-[11px] text-[#86868B] uppercase tracking-wider md:hidden block mb-0.5">Issued</span>
-                        <span className="text-[15px] font-medium text-[#1D1D1F]">
+                      <div className="w-auto lg:w-[90px] text-left">
+                        <span className="text-[10px] lg:text-[11px] text-[#86868B] uppercase tracking-wider lg:hidden block mb-0.5">Issued</span>
+                        {/* تم التعديل هنا: تصغير التاريخ في الجوال lg:text-[15px] */}
+                        <span className="text-[13px] lg:text-[15px] font-medium text-[#1D1D1F]">
                           {cert.issued}
                         </span>
                       </div>
 
                       {/* Verified Badge */}
-                      <div className="w-[100px] flex justify-start">
-                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-medium text-[#34C759] border border-[#34C759]/30 bg-[#34C759]/5 whitespace-nowrap">
+                      <div className="w-auto lg:w-[100px] flex justify-start">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 lg:px-3 lg:py-1 rounded-full text-[11px] lg:text-[12px] font-medium text-[#34C759] border border-[#34C759]/30 bg-[#34C759]/5 whitespace-nowrap">
                           <CheckCircle2 className="w-3.5 h-3.5" /> Verified
                         </span>
                       </div>
 
                       {/* Preview Action */}
-                      <div className="w-[90px] flex justify-end">
-                        <div className="inline-flex items-center gap-1.5 text-[14px] font-medium text-[#0066CC] py-1.5 px-3 rounded-lg group-hover:bg-[#0066CC]/5 transition-colors duration-200 whitespace-nowrap">
+                      <div className="w-auto lg:w-[90px] flex justify-end">
+                        <div className="inline-flex items-center gap-1.5 text-[13px] lg:text-[14px] font-medium text-[#0066CC] py-1.5 px-2 lg:px-3 rounded-lg group-hover:bg-[#0066CC]/5 transition-colors duration-200 whitespace-nowrap">
                           <span>Preview</span>
                           <motion.div
                             initial={{ x: 0 }}
                             whileHover={{ x: 4 }}
                             transition={{ duration: 0.2, ease: "easeOut" }}
                           >
-                            <ArrowRight className="w-4 h-4" />
+                            <ArrowRight className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
                           </motion.div>
                         </div>
                       </div>
