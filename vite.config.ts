@@ -44,7 +44,7 @@ export default defineConfig({
   ],
   base,
   build: {
-    sourcemap: true,
+    sourcemap: false,
   },
   resolve: {
     alias: {
