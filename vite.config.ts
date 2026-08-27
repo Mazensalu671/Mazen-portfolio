@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 
 // تم التعديل هنا: وضع مسار المستودع بدلاً من المسار الافتراضي
-const base = '/Mazen-portfolio/'
+const base = '/'
 const isPreview = process.env.IS_PREVIEW  ? true : false;
 
 // https://vite.dev/config/
