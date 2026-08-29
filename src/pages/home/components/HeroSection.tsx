@@ -69,26 +69,26 @@ export default function HeroSection() {
               Helping businesses grow through paid media, analytics, and conversion tracking—combining technical expertise with measurable marketing results.
             </motion.p>
 
-            {/* Mobile-only Profile Card placement */}
+            {/* ================= MOBILE PROFILE CARD ================= */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.3 }}
               className="w-full flex justify-center my-8 md:hidden"
             >
-              {/* التعديل الأول: تغيير الأبعاد إلى 4/5 لكي لا يتم قص الرأس */}
-              <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-[28px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden bg-slate-900">
+              <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-[28px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden bg-slate-900">
                 <img
                   src="/images/profile.jpg"
                   alt="Mazen Saleh Al-Madhaji"
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />
-                {/* التعديل الثاني: التدرج اللوني يشغل 60% فقط من الأسفل ويترك الوجه حراً تماماً */}
-                <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent pointer-events-none" />
                 
-                <div className="absolute bottom-0 left-0 w-full p-5 flex flex-col text-left z-10">
-                  <h2 className="text-2xl font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
-                  <p className="text-[#3F7DFF] font-semibold text-sm mt-1 mb-2">
+                {/* التدرج اللوني المضغوط (50% من الأسفل فقط) */}
+                <div className="absolute bottom-0 left-0 w-full h-[55%] bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent pointer-events-none" />
+                
+                <div className="absolute bottom-0 left-0 w-full p-5 pb-6 flex flex-col text-left z-10">
+                  <h2 className="text-[22px] font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
+                  <p className="text-[#3F7DFF] font-semibold text-[13px] mt-1 mb-2">
                     Performance Marketing Specialist
                   </p>
                   <div className="flex items-center gap-1.5 text-slate-200 mb-2">
@@ -147,18 +147,18 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* ================= RIGHT COLUMN (Desktop) ================= */}
+          {/* ================= RIGHT COLUMN (Desktop Profile Card) ================= */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             className="relative hidden md:flex justify-end"
           >
-            {/* التعديل الأول للكمبيوتر: aspect-[4/5] */}
+            {/* التعديل الأول: إرجاع الطول المناسب aspect-[3/4] لرفع مساحة الصورة */}
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full max-w-[420px] aspect-[4/5] rounded-[32px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group bg-slate-900"
+              className="relative w-full max-w-[400px] aspect-[3/4] rounded-[32px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group bg-slate-900"
             >
               <img
                 src="/images/profile.png"
@@ -166,19 +166,20 @@ export default function HeroSection() {
                 className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
               
-              {/* التعديل الثاني للكمبيوتر: التدرج اللوني ذو الارتفاع الثابت 60% */}
-              <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent pointer-events-none" />
+              {/* التعديل الثاني: التدرج اللوني يشغل 50% فقط من الأسفل ويترك الوجه واضحاً ومفصولاً */}
+              <div className="absolute bottom-0 left-0 w-full h-[50%] bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent pointer-events-none" />
               
-              <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col text-left z-10">
-                <h2 className="text-3xl font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
-                <p className="text-[#3F7DFF] font-semibold text-base mt-1 mb-4">
+              {/* التعديل الثالث: ضغط المسافات السفلية للنصوص لكي تستقر في الأسفل تماماً */}
+              <div className="absolute bottom-0 left-0 w-full p-7 pb-8 flex flex-col text-left z-10">
+                <h2 className="text-[28px] font-bold text-white tracking-tight leading-tight">Mazen Saleh Al-Madhaji</h2>
+                <p className="text-[#3F7DFF] font-semibold text-[15px] mt-1 mb-3">
                   Performance Marketing Specialist
                 </p>
-                <div className="flex items-center gap-1.5 text-slate-200 mb-3">
+                <div className="flex items-center gap-1.5 text-slate-200 mb-2">
                   <BadgeCheck className="w-5 h-5 text-[#3F7DFF]" />
                   <span className="text-sm font-bold tracking-wide">Meta Certified • Google Certified</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-300 text-sm mb-5">
+                <div className="flex items-center gap-2 text-slate-300 text-sm mb-4">
                   <MapPin className="w-4 h-4 text-slate-400" />
                   <span>45 Street, Sana'a, Yemen</span>
                 </div>
