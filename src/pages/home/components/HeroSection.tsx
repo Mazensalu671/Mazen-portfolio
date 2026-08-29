@@ -157,7 +157,7 @@ export default function HeroSection() {
               className="relative w-full max-w-[420px] aspect-[3/4] rounded-[32px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group bg-slate-900"
             >
               <img
-                src="/images/profile.jpg"
+                src="/images/profile.png"
                 alt="Mazen Saleh Al-Madhaji"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
