@@ -76,16 +76,17 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="w-full flex justify-center my-8 md:hidden"
             >
-              <div className="relative w-full max-w-[360px] aspect-[3/4] rounded-[28px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden bg-slate-900">
+              {/* التعديل الأول: تغيير الأبعاد إلى 4/5 لكي لا يتم قص الرأس */}
+              <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-[28px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden bg-slate-900">
                 <img
                   src="/images/profile.jpg"
                   alt="Mazen Saleh Al-Madhaji"
-                  // التعديل 1: إضافة object-top لرفع الصورة
                   className="absolute inset-0 w-full h-full object-cover object-top"
                 />
-                {/* التعديل 2: تدرج لوني يغطي الأسفل فقط ويترك الوجه واضحاً */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/80 via-50% to-transparent" />
-                <div className="absolute bottom-0 left-0 w-full p-5 flex flex-col text-left">
+                {/* التعديل الثاني: التدرج اللوني يشغل 60% فقط من الأسفل ويترك الوجه حراً تماماً */}
+                <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent pointer-events-none" />
+                
+                <div className="absolute bottom-0 left-0 w-full p-5 flex flex-col text-left z-10">
                   <h2 className="text-2xl font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
                   <p className="text-[#3F7DFF] font-semibold text-sm mt-1 mb-2">
                     Performance Marketing Specialist
@@ -153,21 +154,22 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             className="relative hidden md:flex justify-end"
           >
+            {/* التعديل الأول للكمبيوتر: aspect-[4/5] */}
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-full max-w-[420px] aspect-[3/4] rounded-[32px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group bg-slate-900"
+              className="relative w-full max-w-[420px] aspect-[4/5] rounded-[32px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden group bg-slate-900"
             >
               <img
                 src="/images/profile.png"
                 alt="Mazen Saleh Al-Madhaji"
-                // التعديل 3: إضافة object-top للكمبيوتر أيضاً
                 className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
-              {/* التعديل 4: تدرج لوني أذكى ليبرز الوجه */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/80 via-50% to-transparent" />
               
-              <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col text-left">
+              {/* التعديل الثاني للكمبيوتر: التدرج اللوني ذو الارتفاع الثابت 60% */}
+              <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent pointer-events-none" />
+              
+              <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col text-left z-10">
                 <h2 className="text-3xl font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
                 <p className="text-[#3F7DFF] font-semibold text-base mt-1 mb-4">
                   Performance Marketing Specialist
