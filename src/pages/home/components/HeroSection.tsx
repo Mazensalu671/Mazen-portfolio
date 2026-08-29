@@ -80,9 +80,11 @@ export default function HeroSection() {
                 <img
                   src="/images/profile.jpg"
                   alt="Mazen Saleh Al-Madhaji"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  // التعديل 1: إضافة object-top لرفع الصورة
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent opacity-95" />
+                {/* التعديل 2: تدرج لوني يغطي الأسفل فقط ويترك الوجه واضحاً */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/80 via-50% to-transparent" />
                 <div className="absolute bottom-0 left-0 w-full p-5 flex flex-col text-left">
                   <h2 className="text-2xl font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
                   <p className="text-[#3F7DFF] font-semibold text-sm mt-1 mb-2">
@@ -127,7 +129,7 @@ export default function HeroSection() {
               </a>
             </motion.div>
 
-            {/* Quick Stats - Updated with Strategic B2B & Performance Metrics */}
+            {/* Quick Stats */}
             <motion.div variants={itemVariants} className="mt-12 grid grid-cols-3 gap-3 sm:gap-6 border-t border-white/10 pt-8 w-full max-w-xl">
               <div>
                 <p className="text-2xl sm:text-3xl font-bold text-white tracking-tight">370+</p>
@@ -144,7 +146,7 @@ export default function HeroSection() {
             </motion.div>
           </motion.div>
 
-          {/* ================= RIGHT COLUMN ================= */}
+          {/* ================= RIGHT COLUMN (Desktop) ================= */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -159,9 +161,11 @@ export default function HeroSection() {
               <img
                 src="/images/profile.png"
                 alt="Mazen Saleh Al-Madhaji"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                // التعديل 3: إضافة object-top للكمبيوتر أيضاً
+                className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/60 to-transparent opacity-95" />
+              {/* التعديل 4: تدرج لوني أذكى ليبرز الوجه */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/80 via-50% to-transparent" />
               
               <div className="absolute bottom-0 left-0 w-full p-8 flex flex-col text-left">
                 <h2 className="text-3xl font-bold text-white tracking-tight">Mazen Saleh Al-Madhaji</h2>
