@@ -104,8 +104,8 @@ export default function ContactAndFooter() {
                       {card.title}
                     </span>
                     
-                    {/* التعديل الجوهري تم هنا: استخدام truncate مع تحجيم الخط لضمان بقائه في سطر واحد */}
-                    <h3 className={`text-[13px] min-[375px]:text-[15px] sm:text-[16px] xl:text-[18px] font-bold text-[#0F172A] mb-2 sm:mb-3 transition-colors duration-[220ms] ease-out truncate ${isClickable ? 'group-hover:text-white' : ''}`}>
+                    {/* التعديل هنا: استخدام whitespace-nowrap و tracking-tight لضمان عرض النص بالكامل في سطر واحد */}
+                    <h3 className={`text-[12px] min-[375px]:text-[14px] sm:text-[16px] xl:text-[18px] font-bold text-[#0F172A] mb-2 sm:mb-3 transition-colors duration-[220ms] ease-out whitespace-nowrap tracking-tight ${isClickable ? 'group-hover:text-white' : ''}`}>
                       {card.value}
                     </h3>
                     
