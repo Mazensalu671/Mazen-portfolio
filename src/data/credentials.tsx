@@ -34,6 +34,17 @@ export const credentialsData: Provider[] = [
     ),
     certificates: [
       {
+        id: "g-ads-search",
+        title: "Google Ads Search Certification",
+        subtitle: "Search Campaigns & Bidding Strategy",
+        issued: "Sep 9, 2026",
+        skills: ["Google Ads", "Search Campaigns", "Keyword Targeting", "Automated Bidding", "Performance Optimization"],
+        verifyUrl: "https://skillshop.credential.net/6ea385c5-bf12-4e64-8a05-823b30ab3675#acc.jWNpmEfF",
+        verifyCode: "193635012",
+        pdfUrl: "/certificates/Google Ads Search Certification/Google-Ads-Search-Certification.pdf",
+        imageUrl: "/certificates/Google Ads Search Certification/Google-Ads-Search-Certification.jpg",
+      },
+      {
         id: "g-ecommerce-pro",
         title: "Google Digital Marketing & E-commerce Professional",
         subtitle: "E-commerce Growth Strategy",

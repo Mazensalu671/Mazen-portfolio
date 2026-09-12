@@ -106,8 +106,7 @@ export default function ProofOfImpactSection() {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={containerFade}
-              whileHover={{ y: -12 }}
-              className="bg-[#FFFFFF] rounded-[24px] border border-[#E2E8F0] p-6 lg:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_50px_rgba(63,125,255,0.12)] hover:border-[#3F7DFF]/40 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+              className="bg-[#FFFFFF] rounded-[24px] border border-[#E2E8F0] p-6 lg:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.03)] hover:shadow-[0_25px_50px_rgba(63,125,255,0.12)] hover:border-[#3F7DFF]/40 hover:-translate-y-3 transition-all duration-300 flex flex-col justify-between group cursor-pointer"
               onClick={() => setActiveStory(stories[key])}
             >
               <div>

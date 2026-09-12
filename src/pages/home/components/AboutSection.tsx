@@ -71,8 +71,7 @@ export default function AboutSection() {
             {/* Card 1: Performance Marketing */}
             <motion.div 
               variants={itemVariants} 
-              whileHover={{ y: -6 }}
-              className="group bg-[#FFFFFF] p-6 lg:p-7 rounded-[24px] border border-[#E2E8F0] shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(63,125,255,0.08)] transition-all duration-300 text-left"
+              className="group bg-[#FFFFFF] p-6 lg:p-7 rounded-[24px] border border-[#E2E8F0] shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(63,125,255,0.08)] hover:-translate-y-1.5 transition-all duration-300 text-left"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-[16px] bg-[#EEF4FF] flex items-center justify-center transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300 shrink-0">
@@ -94,8 +93,7 @@ export default function AboutSection() {
             {/* Card 2: Marketing Analytics */}
             <motion.div 
               variants={itemVariants}
-              whileHover={{ y: -6 }} 
-              className="group bg-[#FFFFFF] p-6 lg:p-7 rounded-[24px] border border-[#E2E8F0] shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(63,125,255,0.08)] transition-all duration-300 text-left"
+              className="group bg-[#FFFFFF] p-6 lg:p-7 rounded-[24px] border border-[#E2E8F0] shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(63,125,255,0.08)] hover:-translate-y-1.5 transition-all duration-300 text-left"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 rounded-[16px] bg-[#EEF4FF] flex items-center justify-center transition-transform group-hover:scale-110 group-hover:-rotate-3 duration-300 shrink-0">
@@ -117,8 +115,7 @@ export default function AboutSection() {
             {/* Card 3: Business ROI - Wide Rectangle */}
             <motion.div 
               variants={itemVariants} 
-              whileHover={{ y: -6 }}
-              className="group bg-[#FFFFFF] p-6 lg:p-7 rounded-[24px] border border-[#E2E8F0] shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(63,125,255,0.08)] transition-all duration-300 sm:col-span-2 text-left"
+              className="group bg-[#FFFFFF] p-6 lg:p-7 rounded-[24px] border border-[#E2E8F0] shadow-[0_10px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_20px_40px_rgba(63,125,255,0.08)] hover:-translate-y-1.5 transition-all duration-300 sm:col-span-2 text-left"
             >
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-5">
                 <div className="w-12 h-12 rounded-[16px] bg-[#EEF4FF] flex items-center justify-center shrink-0 transition-transform group-hover:scale-110 duration-300">
