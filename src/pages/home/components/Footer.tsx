@@ -76,7 +76,6 @@ export default function ContactAndFooter() {
           </div>
 
           {/* Bottom: Interactive Cards */}
-          {/* تم التعديل هنا: 1 موبايل، 2 ايباد وتابلت، 4 شاشات كمبيوتر كبيرة */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             
             {contactCards.map((card) => {
@@ -104,10 +103,12 @@ export default function ContactAndFooter() {
                     <span className={`text-[11px] sm:text-[12px] font-bold uppercase tracking-[0.15em] text-[#64748B] block mb-1.5 sm:mb-2 transition-colors duration-[220ms] ease-out ${isClickable ? 'group-hover:text-white/80' : ''}`}>
                       {card.title}
                     </span>
-                    {/* break-all مفيدة جداً هنا لضمان عدم خروج الإيميل عن الشاشة في الهواتف الصغيرة */}
-                    <h3 className={`text-[15px] sm:text-[17px] xl:text-[18px] font-bold text-[#0F172A] mb-2 sm:mb-3 transition-colors duration-[220ms] ease-out break-all sm:break-words ${isClickable ? 'group-hover:text-white' : ''}`}>
+                    
+                    {/* التعديل الجوهري تم هنا: استخدام truncate مع تحجيم الخط لضمان بقائه في سطر واحد */}
+                    <h3 className={`text-[13px] min-[375px]:text-[15px] sm:text-[16px] xl:text-[18px] font-bold text-[#0F172A] mb-2 sm:mb-3 transition-colors duration-[220ms] ease-out truncate ${isClickable ? 'group-hover:text-white' : ''}`}>
                       {card.value}
                     </h3>
+                    
                     <p className={`text-[13px] sm:text-[14px] text-[#64748B] leading-relaxed transition-colors duration-[220ms] ease-out ${isClickable ? 'group-hover:text-white/80' : ''}`}>
                       {card.description}
                     </p>
